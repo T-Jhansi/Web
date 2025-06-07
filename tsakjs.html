@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Functions</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar {
+      background-color: #9caec0;
+      padding: 10px 20px;
+      position: sticky;
+      top: 0;
+      width: 100%;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      display: flex;
+      align-items: center;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    #div {
+      background-image: url('https://i.pinimg.com/736x/39/95/d4/3995d4dcfb99a5b967830819052a4b8a.jpg');
+      background-size: cover;
+      background-position: sticky;
+      padding: 20px;
+      margin-top: 60px;
+      border: 3px solid black;
+      height: auto;
+      width: 1320px;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      flex-wrap: wrap;
+
+    }
+
+    .child {
+      height: 100px;
+      width: 300px;
+      border: 3px solid black;
+      background-color: rgba(222, 226, 230, 0.8);
+      margin: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .child button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #486d99;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .child button:hover {
+      background-color: #358ce4;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <span>Welcome to Javascript.....!</span>
+  </nav>
+
+  <div id="div">
+    <div class="child"><button onclick="Large()">Find Largest number</button></div>
+    <div class="child"><button onclick="evenodd()">Even or Odd</button></div>
+    <div class="child"><button onclick="factorial()">Factorial</button></div>
+    <div class="child"><button onclick="natural()">sum of Natural Numbers</button></div>
+    <div class="child"><button onclick="leap()">Leap Year</button></div>
+    <div class="child"><button onclick="reverse()">reverse a string</button></div>
+    <div class="child"><button onclick="palindrome()">Palindrome</button></div>
+    <div class="child"><button onclick="prime()">Prime</button></div>
+    <div class="child"><button onclick="type()">TypeOf</button></div>
+    <div class="child"><button onclick="multiplication()">Multiplication</button></div>
+  </div>
+
+  <script>
+    function Large() {
+        let a=Number(prompt("Enter any value:"))
+        let b=Number(prompt("Enter any value:"))
+        if(a>b){
+        alert("A is greater");
+    }
+        else{
+        alert("B is greater");
+    }
+    }
+    function evenodd() {
+        let a=Number(prompt("Enter any value:"))
+        if(a%2==0){
+            alert("Even")
+        }
+        else{
+            alert("Odd")
+        }
+    }
+
+    function factorial() {
+        let a = 5;
+        let fact=1
+        for(i=1; i<=a;i++){
+            fact=fact*i
+        }
+        console.log(fact);
+        
+    }
+
+    function natural() {
+        let a=Number(prompt("Enter any value:"));
+        let b=Number(prompt("Enter any value:"));
+        let sum=0;
+        for(i=a;i<=b;i++){
+            sum=sum+i
+        }
+        console.log(sum);
+        
+
+    }
+
+    function leap() {
+        let year=Number(prompt("Enter any year"));
+        if (year%400==0 || year%100!=0 && year%4==0){
+            console.log("Leap year");
+        }
+        else{
+            console.log("Not aLeap Year");   
+        }
+    }
+
+    function reverse() {
+        let str="Hello"
+        console.log(str.split("").reverse().join(""));
+        
+    }
+    reverse()
+
+
+    function palindrome() {
+        var str=string("Enter a String:");
+        var rev=(str.split("").reverse().join(""));
+        alert(str==rev?alert("yes"):alert("No"))
+    }
+    palindrome()
+
+    function prime() {
+        let a=Number(prompt("Enter a num:"));
+        count=0
+        for(i=1;i<a;i++){
+        if(a%i==0){
+            count=count+1
+            if(count==2){
+                alert("Prime")
+            }
+            else{
+                alert("Not a Prime")
+
+            }
+          }
+            }
+        }
+
+    function type() {
+        let a=true;
+        console.log(typeof a);
+        
+    }
+
+    function multiplication() {
+        let a=Number(prompt("Enter a num:"))
+        let b=Number(prompt("Enter a num:"))
+        alert(`The multplication is ${a*b}`)
+
+    }
+  </script>
+</body>
+</html>

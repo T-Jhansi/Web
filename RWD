@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      #nav {
+        height: 100px;
+        background-color: powderblue;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      #nav div {
+        height: 100px;
+        width: 500px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+      ol {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        list-style: none;
+      }
+      img {
+        height: 100px;
+        width: 100px;
+        display: none;
+      }
+      /* Phone Display */
+      @media screen and (max-width: 400px){
+      #nav{
+           background-color:red;
+          }
+        a {
+          display: none;
+        }
+        img {
+          display: block;
+        }
+      /* Tablet Display */
+      @media screen and (min-width: 401px) and (max-width: 600px) {
+        #nav {
+          background-color: green;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="nav">
+      <div>LOGO BLOCK</div>
+      <div>
+        <ol>
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/640px-Hamburger_icon.svg.png"
+            alt=""
+          />
+          <li><a href="">HOME</a></li>
+          <li><a href="">ABOUT</a></li>
+          <li><a href="">LOGIN</a></li>
+          <li><a href="">LOGIN</a></li>
+        </ol>
+      </div>
+    </div>
+  </body>
+</html>

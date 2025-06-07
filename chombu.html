@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      nav {
+        background-color: powderblue;
+        height: 100px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+
+      img {
+        height: 75px;
+        width: 75px;
+        transition: all 0.3s;
+      }
+
+      .menublock {
+        height: 200px;
+        width: 200px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+        background-color: lightgray;
+        transition: all 0.4s ease 0s;
+      }
+
+      .parent {
+        height: 200px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <img src="https://pngimg.com/d/triangle_PNG102.png" alt="" />
+    </nav>
+    <div class="parent">
+      <div class="menublock">
+        <h4>Login</h4>
+        <h4>Profile</h4>
+        <h4>About</h4>
+      </div>
+    </div>
+
+    <script>
+      let img = document.querySelector("img");
+      let menu = document.querySelector(".menublock");
+      menu.style.display = "none";
+      menu.style.transition = "all 0.4s ease 0s";
+
+      img.addEventListener("click", () => {
+        menu.style.display = "block";
+        img.style.transform = "rotate(180deg)";
+      });
+
+      img.addEventListener("mouseout", () => {
+        menu.style.display = "none";
+        img.style.transform = "rotate(0deg)";
+      });
+    </script>
+  </body>
+</html>

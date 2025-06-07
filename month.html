@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    let x=new Date();
+    console.log(x.getDate(4));
+    console.log(x.getDay(3));
+    console.log(x.getMonth(5));
+    let day = 3;
+    let dayName;
+switch(x.getDay(3)) {
+    case 0:
+        dayName = "Sunday";
+        break;
+    case 1:
+        dayName = "Monday";
+        break;
+    case 2:
+        dayName = "Tuesday";
+        break;
+    case 3:
+        dayName = "Wednesday";
+        break;
+    case 4:
+        dayName = "Thursday";
+        break;
+    case 5:
+        dayName = "Friday";
+        break;
+    case 6:
+        dayName = "Saturday";
+        break;
+    default:
+        dayName = "Invalid day";
+    } 
+    console.log(dayName);
+
+     let Month = 5;
+     let MonthName;
+    switch(x.getMonth(5)) {
+    case 0:
+        MonthName = "January";
+        break;
+    case 1:
+        MonthName = "Febrauary";
+        break;
+    case 2:
+        MonthName = "March";
+        break;
+    case 3:
+        MonthName = "April";
+        break;
+    case 4:
+        MonthName = "May";
+        break;
+    case 5:
+        MonthName = "June";
+        break;
+    case 6:
+        MonthName = "July";
+        break;
+    case 7:
+        MonthName = "August";
+        break;
+    case 8:
+        MonthName = "September";
+        break;
+    case 9:
+        MonthName = "October";
+        break;
+    case 10:
+        MonthName = "November";
+        break;
+    case 11:
+        MonthName = "December";
+        break;
+    default:
+        dayName = "Invalid Month";
+    } 
+    console.log(MonthName);
+    </script>
+</body>
+</html>

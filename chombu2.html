@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .effect1 {
+        border: 2px solid red;
+        background-color: black;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: bolder;
+        font-size: larger;
+        color: white;
+      }
+
+      .effect2 {
+        border: 2px solid yellow;
+        background-color: blue;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: bolder;
+        font-size: small;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>WELCOME</h1>
+    <button onclick="e1()">CLICK LEFT</button>
+    <button onclick="e2()">CLICK RIGHT</button>
+
+    <script>
+      let h1 = document.querySelector("h1");
+      function e1() {
+        h1.classList.add("effect1");
+        h1.classList.remove("effect2");
+      }
+
+      function e2() {
+        h1.classList.add("effect2");
+        h1.classList.remove("effect1");
+      }
+    </script>
+  </body>
+</html>

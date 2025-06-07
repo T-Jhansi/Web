@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OLA</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+            background-color: hsl(57, 25%, 15%);
+            padding: 10px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            box-shadow: 0 2px 5px rgba(236, 231, 231, 0.911);
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar img {
+            width: 30px;
+            height: 24px;
+            margin-right: 10px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 80px;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            margin: 40px auto;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .image-container img {
+            max-width: 300px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        #container{
+            height: auto;
+            width: 100%;
+            border:10px black;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        #box1,#box2,#box3{
+            border:10px black;
+            height: 300px;
+            width: 300px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968774.png" alt="Logo">
+        <span><strong>OLA</strong></span>
+    </nav>
+
+    <h1><center>🙏WELCOME TO OLA...🙏</center></h1>
+        
+
+    <div class="image-container">
+        <img src="https://t4.ftcdn.net/jpg/05/17/87/17/360_F_517871765_XxFbBbKrbHl8ibmM3dcew0M5d8CLlRZN.jpg" alt="Auto">
+        <img src="https://cdn.bikedekho.com/upload/standoutfeatures/65ef139e4dfd7.jpg" alt="Bike">
+        <img src="https://stimg.cardekho.com/images/carexteriorimages/630x420/BMW/M5-2025/11821/1719462197562/front-left-side-47.jpg?impolicy=resize&imwidth=480" alt="Car">
+    </div>
+    <div id="container">
+        <div id="box1"></div>
+        <div id="box2"></div>
+        <div id="box3"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task App</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: antiquewhite;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 20px;
+    }
+
+    nav {
+      background-color: lightpink;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      height: 100px;
+      font-size: 30px;
+      font-weight: bold;
+    }
+
+    button {
+      margin: 10px;
+      padding: 20px;
+      font-size: 18px;
+      border: none;
+      background-color: #f8b4c0;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #f2879f;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>Task</nav>
+
+  <div style="text-align:center; margin-top: 50px;">
+    <button onclick="calculateSum()">Sum</button>
+    <button onclick="factorial()">Factorial</button>
+    <button onclick="evenOrOdd()">Even or Odd</button>
+  </div>
+
+  <script>
+    function calculateSum() {
+      let a = Number(prompt("Enter the first value:"));
+      let b = Number(prompt("Enter the second value:"));
+      console.log(`Sum is ${a + b}`);
+      alert(`Sum is ${a + b}`);
+    }
+
+    function factorial() {
+      let n = Number(prompt("Enter a number:"));
+      let fact = 1;
+      for (let i = 1; i <= n; i++) {
+        fact *= i;
+      }
+      console.log(`Factorial is ${fact}`);
+      alert(`Factorial is ${fact}`);
+    }
+
+    function evenOrOdd() {
+      let d = Number(prompt("Enter a number:"));
+      if (d % 2 === 0) {
+        console.log(`It is even: ${d}`);
+        alert(`It is even: ${d}`);
+      } else {
+        console.log(`It is odd: ${d}`);
+        alert(`It is odd: ${d}`);
+      }
+    }
+  </script>
+
+</body>
+</html>
