@@ -1,1 +1,141 @@
-hjhvadhwg
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Job Portal</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: #f4f6f8;
+      color: #333;
+    }
+
+    header {
+      background-color: #0f62fe;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    header p {
+      margin-top: 0.5rem;
+      font-size: 1.2rem;
+    }
+
+    .search-container {
+      display: flex;
+      justify-content: center;
+      padding: 1rem;
+      background: white;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .search-container input {
+      width: 80%;
+      max-width: 500px;
+      padding: 0.8rem;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    .jobs {
+      max-width: 900px;
+      margin: 2rem auto;
+      display: grid;
+      gap: 1rem;
+      padding: 0 1rem;
+    }
+
+    .job-card {
+      background: white;
+      border-radius: 10px;
+      padding: 1.5rem;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.07);
+      transition: transform 0.2s;
+    }
+
+    .job-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .job-card h3 {
+      margin-top: 0;
+      color: #0f62fe;
+    }
+
+    .job-card p {
+      margin: 0.5rem 0 0;
+    }
+
+    @media (max-width: 600px) {
+      .search-container input {
+        width: 95%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>CareerSphere</h1>
+    <p>Your next opportunity starts here 🚀</p>
+  </header>
+
+  <div class="search-container">
+    <input type="text" id="searchInput" placeholder="Search jobs by title..." onkeyup="filterJobs()" />
+  </div>
+
+  <div class="jobs" id="jobList">
+    <!-- Job cards will be injected here -->
+  </div>
+
+  <script>
+    const jobs = [
+      { title: "Frontend Developer", company: "TechNova", location: "Remote" },
+      { title: "Backend Engineer", company: "CodeCrafters", location: "New York, NY" },
+      { title: "Data Analyst", company: "Insights Inc.", location: "San Francisco, CA" },
+      { title: "UX Designer", company: "PixelPerfect", location: "Austin, TX" },
+      { title: "Project Manager", company: "LaunchLabs", location: "Chicago, IL" }
+    ];
+
+    const jobList = document.getElementById("jobList");
+
+    function displayJobs(jobArray) {
+      jobList.innerHTML = '';
+      jobArray.forEach(job => {
+        const card = document.createElement("div");
+        card.className = "job-card";
+        card.innerHTML = `
+          <h3>${job.title}</h3>
+          <p><strong>Company:</strong> ${job.company}</p>
+          <p><strong>Location:</strong> ${job.location}</p>
+        `;
+        jobList.appendChild(card);
+      });
+    }
+
+    function filterJobs() {
+      const query = document.getElementById("searchInput").value.toLowerCase();
+      const filtered = jobs.filter(job => job.title.toLowerCase().includes(query));
+      displayJobs(filtered);
+    }
+
+    // Initial load
+    displayJobs(jobs);
+  </script>
+</body>
+</html>
+
